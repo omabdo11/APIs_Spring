@@ -2,6 +2,13 @@ spring:
   application:
     name: task1-spring
 
+
+  security:
+    user:
+      name: omar
+      password: omar0111
+
+
   messages:
     basename: i18n/messages
 

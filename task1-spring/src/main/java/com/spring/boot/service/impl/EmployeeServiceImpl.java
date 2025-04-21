@@ -124,7 +124,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     private static List<EmployeeDto> extractEmployee(List<Employee> employees) {
         List <EmployeeDto> employeeDtos  = new ArrayList<>();
         for (Employee employee1 : employees) {
-            employeeDtos.add(EmployeeMapper.EMPLOYEE_MAPPER.ToEmployeeDto(employee1));
+            EmployeeDto employeeDto = EmployeeMapper.EMPLOYEE_MAPPER.ToEmployeeDto(employee1);
+            employeeDto.setEmails(null);
+            employeeDtos.add(employeeDto);
         }
         return employeeDtos;
     }
